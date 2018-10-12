@@ -1,0 +1,22 @@
+CFG_LOCAL_RUN = True
+CFG_TELEGRAM_KEY    = '676006235:AAHPUUY5EvJoU7xT1EhRbMkR91byXNCR3KI'
+CFG_PORT     = 443
+CFG_CERT     = '/root/cert.pem'
+CFG_CERT_KEY = '/root/private.key'
+
+CFG_TELEGRAM_API_URL = 'https://api.telegram.org/bot'+TELEGRAM_KEY+'/'
+CFG_SERVICE_WEBHOOK_URL = 'https://139.59.142.122/wh'
+
+CFG_LOCALHOST = "0.0.0.0"
+CFG_SSL_CONTEXT = (CFG_CERT, CFG_CERT_KEY)
+CFG_DEBUG = True
+
+if CFG_LOCAL_RUN:
+    CFG_LOCALHOST = "127.0.0.1"
+    CFG_SSL_CONTEXT = None
+    CFG_TELEGRAM_API_URL = ''
+    CFG_PORT = 5001
+    CFG_SERVICE_WEBHOOK_URL = f'https://127.0.0.1:{CFG_PORT}/wh' 
+    
+    
+    
